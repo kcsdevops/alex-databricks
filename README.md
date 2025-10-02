@@ -1,27 +1,27 @@
-# VM W**Configuração:**
-- Tamanho: Standard_B1s (1 vCPU, 1GB RAM) - ~$7.50/mês
-- OS: Windows Server 2022
-- Disco: 30GB Standard HDD
-- Região: Brazil South
+# 🚀 ALEPROJ - Azure Infrastructure Projects
 
-**Arquitetura:**
-- **RG Estado:** `rg-blob-br-tsstate-tf-prod` (Key Vault + tfstate)
-- **RG Deploy:** `rg-dev-sql-vm` (VM, SQL, networking)
-- **Backend:** Azure Storage para estado remoto
+## 📋 Visão Geral
 
-**Segurança:**
-- Key Vault: `kv-dev-terraform-667`
-- Credenciais armazenadas com segurança
-- Service Principal com acesso restrito
+Este repositório contém dois projetos Azure independentes, otimizados para desenvolvimento com foco em economia de custos.
 
-**Acesso:**
-- Usuário: `devadmin`
-- Senha: Armazenada no Key Vault
-- RDP: Apenas seu IP (177.214.188.64)Ambiente DEV
+## 📁 Estrutura dos Projetos
 
-Terraform para VM Windows no Azure com menor custo possível + Key Vault para segurança.
+### 🖥️ [Azure VM Project](./azure-vm-project/)
+**Windows Server com SQL Server para desenvolvimento**
 
-## Configuração
+- **Recursos**: VM Standard_B1s, SQL Server, RDP habilitado
+- **Custo**: ~R$ 72.99/mês (R$ 18.25 com auto-shutdown)
+- **Ideal para**: Desenvolvimento .NET, aplicações Windows
+
+### 🔬 [Azure Databricks Project](./azure-databricks-project/) 
+**Ambiente Analytics para Ciência de Dados**
+
+- **Recursos**: Databricks Premium, Cluster otimizado, Data Lake
+- **Custo**: ~R$ 71.23/mês (R$ 8.55 com auto-shutdown)
+- **Trial**: 14 dias gratuitos Premium tier
+- **Ideal para**: Analytics, Machine Learning, Big Data
+
+## 💰 Análise de Custos Consolidada
 
 **VM Specs:**
 - Tamanho: Standard_B1s (1 vCPU, 1GB RAM) - ~$7.50/mês
